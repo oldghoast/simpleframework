@@ -15,12 +15,12 @@ public class HelloServlet extends HttpServlet {
 
     @Override
     public void init() throws ServletException {
-        log.error("初始化Servlet...");
+        log.debug("初始化Servlet...");
     }
 
     @Override
     public void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        log.error("是我执行了doGet方法，我才是入口");
+        log.debug("是我执行了doGet方法，我才是入口");
         doGet(req, res);
     }
 
@@ -33,6 +33,6 @@ public class HelloServlet extends HttpServlet {
 
     @Override
     public void destroy() {
-        log.error("Destroy...");
+        log.debug("Destroy...");
     }
 }
