@@ -4,6 +4,18 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class ReflectTarget {
+
+    public ReflectTarget(){
+        log.debug("public");
+    }
+
+    private ReflectTarget(int s){
+        log.debug(s+"");
+    }
+
+    /**
+     * 获取类对象的3种方法
+     */
     public static void main(String[] args) throws ClassNotFoundException {
         ReflectTarget reflectTarget = new ReflectTarget();
         Class class1 = reflectTarget.getClass();
